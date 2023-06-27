@@ -20,6 +20,5 @@ class MainPage(BasePage):
         return cat
 
     def filter_name(self):
-        filter_by_name = self.browser.find_element(*MainPageLocators.FILTER_BY_PET_NAME)
-        filter_by_name.send_keys('Chipa')
+        self.browser.find_element(*MainPageLocators.FILTER_BY_PET_NAME).send_keys('Chipa', Keys.ENTER)
 
